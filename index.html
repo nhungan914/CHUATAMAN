@@ -2,149 +2,265 @@
 <html lang="vi">
 
 <head>
-
 <meta charset="UTF-8">
-
 <title>CHÙA TÂM ẤN</title>
-</head>
 
 <style>
 
-/* Toàn bộ trang */
+/* ================= */
 body{
-background-color: #fff8dc;
+margin:0;
 font-family: "Times New Roman", serif;
-margin: 0;
-line-height: 1.8;
+background-color:#fff8dc;
 }
 
+/* ================= */
+/* BANNER */
+.banner{
 
-/* Tiêu đề chùa */
-.header-title{
+background-image:url("banner.jpg");
 
-text-align: center;
+height:350px;
 
-font-size: 48px;
+background-size:cover;
 
-color: #b22222;
+background-position:center;
 
-padding: 20px;/*là khoảng trống từ tiêu đề đến viền trang*/
+display:flex;
 
-font-weight: bold;/*bold=in đậm*/
+justify-content:center;
+
+align-items:center;
 
 }
 
-/* Menu */
+.banner h1{
 
+color:white;
+
+font-size:60px;
+
+background:rgba(0,0,0,0.5);
+
+padding:15px 40px;
+
+border-radius:10px;
+
+}
+
+/* ================= */
+/* MENU */
 .navbar{
 
-background-color: #9a8326;
+background:#e6d38a;
 
-padding: 18px;
+padding:15px;
 
-text-align: center;
+text-align:center;
+
+box-shadow:0 3px 6px gray;
 
 }
 
 .navbar a{
 
-text-decoration: none;
+text-decoration:none;
 
-color: black;
+margin:0 20px;
 
-margin: 0 15px;
+font-size:18px;
 
-font-weight: bold;
+font-weight:bold;
 
-font-size: 18px;
+color:black;
+
+transition:0.3s;
 
 }
 
 .navbar a:hover{
 
-color: #b22222;
+color:#8b0000;
+
+font-size:20px;
 
 }
 
-/* Khung có ảnh nền */
+/* ================= */
+/* KHUNG GIỚI THIỆU */
+.container{
 
-.khung-chua{
+width:1100px;
 
-background-image: url("phongchua.jpg");
+margin:auto;
 
-background-size: cover;/*tràn khung*/
+margin-top:40px;
 
-background-position: center;
+display:flex;
 
-background-repeat: no-repeat;
-
-padding: 80px;
-
-margin: 40px auto;
-
-width: 900px;
+gap:30px;
 
 }
 
-/* Nội dung trong khung */
+/* CỘT TRÁI */
+
+.left{
+
+flex:2;
+
+background-image:url("phongchua.jpg");
+
+background-size:cover;
+
+padding:40px;
+
+border-radius:15px;
+
+box-shadow:0 0 10px gray;
+
+}
 
 .noidung{
 
-background-color: rgba(255,255,255,0.85);/*màu nội dung trong khung*/
+background:rgba(255,255,255,0.9);
 
-padding: 25px;/*khoảng cách trống 4 Trên-Dưới-Trái-Phải*/
+padding:25px;
 
-border-radius: 10px;/*Bo tròn*/
+border-radius:10px;
 
-font-size: 18px;
+text-align:justify;
 
-text-align: justify;/*căn đều 2 bên*/
+font-size:18px;
+word-wrap: break-word;
+overflow-wrap: break-word;
 
 }
 
-/**** HÌNH CHÙA***/
-.hinh-chua{
-    text-align: center;
-    margin : 10px 20px;/* khoảng cách ngoài*/
+/* CỘT PHẢI */
+
+.right{
+
+flex:1;
+
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 0 10px gray;
+
 }
-.hinh-chua img {
-width : 80%;/*chiều rộng của ảnh*/
-border-radius: 10px;/*bo tròn*/
-border : 3px solid black;
+
+/* ẢNH BÊN PHẢI */
+
+.right img{
+
+width:100%;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+border:3px solid #8b4513;
+
+transition:0.4s;
+
 }
+
+.right img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ================= */
+/* PHẦN HOẠT ĐỘNG */
+
+.section{
+
+width:1100px;
+
+margin:auto;
+
+margin-top:60px;
+
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#8b0000;
+
+}
+
+/* GRID ẢNH */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:20px;
+
+margin-top:30px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:12px;
+
+border:3px solid #8b4513;
+
+transition:0.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.08);
+
+}
+
+/* ================= */
+/* FOOTER */
 
 .footer{
 
-background-color: #e6d38a;
+background:#e6d38a;
 
-text-align: center;
+margin-top:60px;
 
-padding: 20px;
+padding:25px;
 
-font-size: 16px;
+text-align:center;
 
-margin-top: 40px;
+font-size:18px;
 
 }
 
 </style>
 
+</head>
 
 <body>
 
-<!-- ================= -->
-<!-- TIÊU ĐỀ -->
-<!-- ================= -->
+<!-- BANNER -->
 
-<div class="header-title">
+<div class="banner">
 
-CHÙA TÂM ẤN
+<h1>CHÙA TÂM ẤN</h1>
 
 </div>
 
-<!-- ================= -->
 <!-- MENU -->
-<!-- ================= -->
 
 <div class="navbar">
 
@@ -152,179 +268,181 @@ CHÙA TÂM ẤN
 
 <a href="hinhanh.html">Hình ảnh</a>
 
-<a href="video.html">Video</a>
-
 <a href="lichsu.html">Lịch sử</a>
 
 <a href="lienhe.html">Liên hệ</a>
 
 </div>
 
-<!-- ================= -->
-<!-- KHUNG GIỚI THIỆU -->
-<!-- ================= -->
+<!-- GIỚI THIỆU -->
 
-<div class="khung-chua">
+<div class="container">
+
+<div class="left">
 
 <div class="noidung">
 
-<h2 style="text-align:center;">
+<h2 style="text-align:center">
 
-Chùa Tâm Ấn: Ánh Sáng Như Lai Giữa Lòng Trần Thế
+Chùa Tâm Ấn – Ánh sáng Như Lai
 
 </h2>
 
 <p>
 
-Tọa lạc bình yên trên con đường Đinh Tiên Hoàng,
-<b>Chùa Tâm Ấn</b> hiện lên như một ngôi chùa nhiệm mầu giữa chốn nhân gian.
-Ngôi già lam khoác lên mình một sắc vàng rực rỡ nhưng không hề phô trương;
-màu vàng ấy thanh tao, ấm áp,
-tựa như ánh sáng từ sắc thân Như Lai đang tỏa rạng,
+<h2 style="text-align:center">
+
+Chùa Tâm Ấn – Ánh Sáng Như Lai Giữa Lòng Trần Thế
+
+</h2>
+
+<p>
+
+<b>Chùa Tâm Ấn</b> tọa lạc bình yên trên con đường Đinh Tiên Hoàng, 
+hiện lên như một ngôi chùa nhiệm mầu giữa chốn nhân gian. 
+Ngôi già lam khoác lên mình một sắc vàng rực rỡ nhưng không hề phô trương; 
+màu vàng ấy thanh tao, ấm áp, tựa như ánh sáng từ sắc thân Như Lai đang tỏa rạng, 
 chiếu soi và xoa dịu mọi muộn phiền của nẻo luân hồi.
 
-</p>
+<br><br>
 
-<p>
+Nơi đây chẳng cần quá ồn ào hay náo nhiệt, 
+nhưng vẫn uy nghiêm và hùng vĩ giữa đất trời. 
+Mặc cho sự chi phối của vô thường hay sự xô đẩy của bát phong 
+(tám ngọn gió thế gian: được – mất, khen – chê, vinh – nhục, vui – buồn), 
+Tâm Ấn vẫn tĩnh tại, kiên cố như tâm bồ đề chẳng bao giờ thối chuyển.
 
-Nơi đây chẳng cần quá ồn ào hay náo nhiệt,
-nhưng vẫn uy nghiêm và hùng vĩ giữa đất trời.
-Mặc cho sự chi phối của vô thường
-hay sự xô đẩy của bát phong
-(tám ngọn gió thế gian: được - mất, khen - chê,
-vinh - nhục, vui - buồn),
-Tâm Ấn vẫn tĩnh tại,
-kiên cố như tâm bồ đề chẳng bao giờ thối chuyển.
+<br><br>
 
-</p>
-
-<p>
-
-Nơi chốn thiền môn thanh tịnh ấy,
-lời thệ nguyện từ bi vẫn ngày đêm vang vọng khắp cả trời xanh.
-Từ ân đức khai sơn tạo tự của
-<b>Sư ông Thích Tâm Ấn</b>
-đến sự tiếp nối của
-<b>Sư bà Thích Nữ Minh Diệu</b>,
+Nơi chốn thiền môn thanh tịnh ấy, 
+lời thệ nguyện từ bi vẫn ngày đêm vang vọng khắp cả trời xanh. 
+Từ ân đức khai sơn tạo tự của 
+<b>Sư ông Thích Tâm Ấn</b> 
+đến sự tiếp nối vĩ đại của 
+<b>Sư bà Thích Nữ Minh Diệu</b>, 
 bao thế hệ chư tôn đức đã dốc lòng gìn giữ hạnh nguyện cao cả.
 
-</p>
+<br><br>
 
-<p>
+Bậc xuất trần thượng sĩ – những người con trai, con gái của Đức Như Lai – 
+đã dóng lên tiếng chuông thệ nguyện sâu xa vang khắp cả đất trời: 
+Nguyện một lòng gìn giữ giới pháp thiêng liêng của Thế Tôn, 
+nguyện thấu triệt và thấm nhuần chân lý nhiệm mầu, 
+và nguyện hoằng độ hết thảy chúng sanh đang đắm chìm trong biển khổ sinh tử.
 
-Bậc xuất trần thượng sĩ –
-những người con trai, con gái của Đức Như Lai –
-đã dóng lên tiếng chuông thệ nguyện sâu xa vang khắp đất trời:
+<br><br>
 
-Nguyện một lòng gìn giữ giới pháp thiêng liêng của Thế Tôn,
-nguyện thấu triệt và thấm nhuần chân lý nhiệm mầu,
-và nguyện hoằng độ hết thảy chúng sanh
-đang đắm chìm trong biển khổ sinh tử.
-
-</p>
-
-<p>
-
-Chính nhờ những hạnh nguyện cao xa và vô lậu ấy,
-ngôi già lam ngày càng phát triển hưng thịnh.
-Sự vững bền ấy không đến từ vật chất thế gian,
-mà được vun bồi bởi giới đức trang nghiêm
+Chính nhờ những hạnh nguyện cao xa và vô lậu ấy, 
+ngôi già lam ngày càng phát triển hưng thịnh; 
+sự vững bền ấy không đến từ vật chất thế gian, 
+mà được vun bồi bởi giới đức trang nghiêm 
 và bi nguyện rộng lớn của các bậc trụ trì.
 
-</p>
+<br><br>
 
-<p>
-
-Bước qua cổng tam quan,
-bỏ lại sau lưng bao tà kiến và sự trần ai,
-mỗi người Phật tử khi trở về Tâm Ấn
-đều tìm thấy một bến đỗ bình an cho tâm hồn.
-
-Ngôi chùa không chỉ là mái ngói cội bồ đề che mưa nắng,
-mà còn là ngọn hải đăng soi đường chỉ lối
+Bước qua cổng tam quan, 
+bỏ lại sau lưng bao tà kiến và sự trần ai, 
+mỗi người Phật tử khi trở về Tâm Ấn tự 
+đều tìm thấy một bến đỗ bình an cho tâm hồn. 
+Ngôi chùa không chỉ là mái ngói cội bồ đề che mưa nắng, 
+mà còn là ngọn hải đăng soi đường chỉ lối 
 cho những ai đang lạc bước trong đêm dài vô minh.
 
-</p>
+<br><br>
 
-<p>
+Hương thơm của chốn già lam này 
+không phải là hương trầm vật chất, 
+mà là thứ hương thơm của giới luật và đức hạnh. 
+Đúng như lời Đức Phật đã dạy trong Kinh Pháp Cú (Câu 54):
 
-Hương thơm của chốn già lam này
-không phải là hương trầm vật chất,
-mà là thứ hương thơm của giới luật và đức hạnh.
+<br><br>
 
-Đúng như lời Đức Phật đã dạy trong
-<b>Kinh Pháp Cú (Câu 54)</b>:
-
-</p>
-
-<p style="text-align:center; font-style: italic;">
+<i>
 
 "Hương các loài hoa thơm,<br>
 Không ngược bay chiều gió.<br>
 Nhưng hương người đức hạnh,<br>
 Ngược gió khắp tung bay."
 
-</p>
+</i>
 
-<p>
+<br><br>
 
-Chùa Tâm Ấn chính là minh chứng sống động cho câu kinh ấy.
-Dù cõi sa bà có lắm nỗi truân chuyên,
-uy đức và lòng từ bi của chư vị chư tăng ni nơi đây
-vẫn ngược gió trần gian mà lan tỏa muôn phương,
+Chùa Tâm Ấn chính là minh chứng sống động cho câu kinh ấy. 
+Dù cõi sa bà có lắm nỗi truân chuyên, 
+uy đức và lòng từ bi của chư vị tăng ni nơi đây 
+vẫn ngược gió trần gian mà lan tỏa muôn phương, 
 hóa độ bao người quay về nẻo giác.
 
-</p>
+<br><br>
 
-<p>
+Để khép lại bức tranh về một ngôi chùa thiêng liêng, 
+nơi những bậc chân tu ngày đêm tĩnh lặng độ đời, 
+xin gửi tặng bốn câu thơ mang đậm chất vị giải thoát:
 
-Để khép lại bức tranh về một ngôi chùa thiêng liêng,
-xin gửi tặng bốn câu thơ:
+<br><br>
 
-</p>
-
-<p style="text-align:center; font-weight:bold;">
+<b>
 
 Đại nguyện từ bi độ chúng sanh,<br>
 Trần ai huyễn mộng bặt lợi danh.<br>
 Bát phong chẳng động tâm vô ngã,<br>
 Bát nhã thuyền từ vượt tử sanh.
 
+</b>
+
+</p>
 </p>
 
 </div>
 
 </div>
 
-<!-- ================= -->
-<!-- ẢNH CHÙA -->
-<!-- ================= -->
+<!-- CỘT PHẢI -->
 
-<div class="hinh-chua">
+<div class="right">
 
-<h2 style="text-align: center;">Hình ảnh Chùa Tâm Ấn</h2>
+<h3>Hình ảnh nổi bật</h3>
 
-<img src="chua.jpg">
+<img src="anh1.jpg">
+<img src="anh2.jpg">
+<img src="anh3.jpg">
+<img src="anh4.jpg">
+<img src="anh5.jpg">
+<img src="anh6.jpg">
 
 </div>
 
-<!-- ================= -->
+</div>
+
+<!-- HOẠT ĐỘNG -->
+
+<div class="section">
+
+<h2>Hoạt động từ thiện</h2>
+
+<div class="gallery">
+
+<img src="anh1.jpg">
+<img src="anh2.jpg">
+<img src="anh3.jpg">
+<img src="anh4.jpg">
+<img src="anh5.jpg">
+<img src="anh1.jpg">
+
+</div>
+
+</div>
+
 <!-- FOOTER -->
-<!-- ================= -->
 
 <div class="footer">
 
-<p>
-
 📍 Địa chỉ: Đường Đinh Tiên Hoàng  
 <br>
-
 📞 Điện thoại: 0123 456 789  
 <br>
-
 🪷 Chùa Tâm Ấn – Nơi bình an cho tâm hồn
-
-</p>
 
 </div>
 
