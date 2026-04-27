@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nhungan914.github.io/CHUATAMAN/sitemap.xml
